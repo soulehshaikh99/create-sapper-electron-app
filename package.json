@@ -17,7 +17,7 @@
     "icon": "static/logo-512.png",
     "productName": "Sapper and Electron App",
     "files": [
-      "__sapper__/build/**/*",
+      "__sapper__/export/**/*",
       "main.js"
     ],
     "win": {},
@@ -34,7 +34,7 @@
     "test": "run-p --race dev cy:run",
     "electron": "wait-on http://localhost:3000 && electron .",
     "electron-dev": "concurrently \"yarn run dev\" \"yarn run electron\"",
-    "preelectron-pack": "yarn run build",
+    "preelectron-pack": "yarn run export",
     "electron-pack": "electron-builder"
   },
   "dependencies": {
