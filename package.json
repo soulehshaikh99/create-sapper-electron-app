@@ -1,0 +1,80 @@
+{
+  "name": "create-sapper-electron-app",
+  "version": "0.1.0",
+  "description": "A simple starter project to get up and developing quickly with the blend of Sapper and Electron JS for building a Native Desktop App on various OS Platforms like Windows, Linux and macOS using Electron Builder.",
+  "main": "main.js",
+  "author": "Souleh Shaikh <author.souleh@thegeekytutor.com>",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soulehshaikh99/create-sapper-electron-app"
+  },
+  "bugs": {
+    "url": "https://github.com/soulehshaikh99/create-sapper-electron-app/issues"
+  },
+  "build": {
+    "icon": "static/logo-512.png",
+    "productName": "Sapper and Electron App",
+    "files": [
+      "__sapper__/build/**/*",
+      "main.js"
+    ],
+    "win": {},
+    "linux": {},
+    "mac": {}
+  },
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "export": "sapper export",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "electron": "wait-on http://localhost:3000 && electron .",
+    "electron-dev": "concurrently \"yarn run dev\" \"yarn run electron\"",
+    "preelectron-pack": "yarn run build",
+    "electron-pack": "electron-builder"
+  },
+  "dependencies": {
+    "electron-serve": "^1.0.0"
+  },
+  "devDependencies": {
+    "compression": "^1.7.1",
+    "concurrently": "^5.3.0",
+    "electron": "^9.2.1",
+    "electron-builder": "^22.8.0",
+    "npm-run-all": "^4.1.5",
+    "polka": "next",
+    "sapper": "^0.28.0",
+    "sirv": "^1.0.0",
+    "svelte": "^3.17.3",
+    "svelte-loader": "^2.9.0",
+    "wait-on": "^5.2.0",
+    "webpack": "^4.7.0",
+    "webpack-modules": "^1.0.0"
+  },
+  "keywords": [
+    "cross-platform",
+    "native-app",
+    "installed-app",
+    "desktop-applications",
+    "windows",
+    "linux",
+    "macos",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "svelte",
+    "sapper",
+    "webpack",
+    "electron",
+    "electron-builder",
+    "electron-serve",
+    "concurrently",
+    "wait-on",
+    "small-footprint"
+  ]
+}
