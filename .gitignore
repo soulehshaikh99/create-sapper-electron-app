@@ -13,10 +13,10 @@ node_modules/
 jspm_packages/
 /src/node_modules/@sapper/
 
-# cypress configuration directory
-cypress
+# Ignore cypress screenshots
+/cypress/screenshots/
 
-# Svelte Dev and PRoduction Directory
+# Svelte Dev and Production Directory
 /__sapper__/
 
 # Electron Distribution
